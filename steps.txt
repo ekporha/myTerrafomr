@@ -8852,3 +8852,39 @@ aws_instance.ec2: Creation complete after 2m40s [id=i-0be8661ea945420ed]
 
 Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
 edemkporhagmail@ip-172-31-23-34:~/Desktop/myTerraform$ 
+
+
+Step 2: Change the key pair permission
+
+chmod 400 my_key_pair.pem 
+edemkporhagmail@ip-172-31-23-34:~/Desktop/myTerraform$ 
+edemkporhagmail@ip-172-31-23-34:~/Desktop/myTerraform$ 
+edemkporhagmail@ip-172-31-23-34:~/Desktop/myTerraform$ 
+edemkporhagmail@ip-172-31-23-34:~/Desktop/myTerraform$ ssh -i "my_key_pair.pem" ubuntu@ec2-54-242-108-73.compute-1.amazonaws.com
+The authenticity of host 'ec2-54-242-108-73.compute-1.amazonaws.com (54.242.108.73)' can't be established.
+ECDSA key fingerprint is SHA256:4tTey6N97ikfMXxIPC7b5M+nmzsY2rsMKhv5of0fdZk.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'ec2-54-242-108-73.compute-1.amazonaws.com,54.242.108.73' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 20.04.3 LTS (GNU/Linux 5.11.0-1022-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Jul 29 16:12:20 UTC 2023
+
+  System load:  0.0               Processes:             104
+  Usage of /:   30.8% of 7.69GB   Users logged in:       0
+  Memory usage: 49%               IPv4 address for ens5: 172.31.20.67
+  Swap usage:   0%
+
+
+239 updates can be applied immediately.
+182 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+New release '22.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+Last login: Sat Jul 29 15:51:17 2023 from 54.226.132.57
