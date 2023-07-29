@@ -8888,3 +8888,36 @@ Run 'do-release-upgrade' to upgrade to it.
 
 
 Last login: Sat Jul 29 15:51:17 2023 from 54.226.132.57
+
+ubuntu@ip-172-31-20-67:~$ jenkins --version
+2.401.3
+ubuntu@ip-172-31-20-67:~$ java --version
+openjdk 11.0.19 2023-04-18
+OpenJDK Runtime Environment (build 11.0.19+7-post-Ubuntu-0ubuntu120.04.1)
+OpenJDK 64-Bit Server VM (build 11.0.19+7-post-Ubuntu-0ubuntu120.04.1, mixed mode, sharing)
+ubuntu@ip-172-31-20-67:~$ python3 --version
+Python 3.8.10
+ubuntu@ip-172-31-20-67:~$ 
+ubuntu@ip-172-31-20-67:~$ 
+ubuntu@ip-172-31-20-67:~$ sudo systemctl status jenkins
+● jenkins.service - Jenkins Continuous Integration Server
+     Loaded: loaded (/lib/systemd/system/jenkins.service; enabled; vendor preset: enabled)
+     Active: active (running) since Sat 2023-07-29 15:53:19 UTC; 24min ago
+   Main PID: 5288 (java)
+      Tasks: 36 (limit: 1116)
+     Memory: 283.8M
+     CGroup: /system.slice/jenkins.service
+             └─5288 /usr/bin/java -Djava.awt.headless=true -jar /usr/share/java/jenkins.war --webroot=/var/cache/jenkins/war --httpPort=8080
+
+Jul 29 15:52:31 ip-172-31-20-67 jenkins[5288]: 66c6402d88874c22aaa08a7858de6503
+Jul 29 15:52:31 ip-172-31-20-67 jenkins[5288]: This may also be found at: /var/lib/jenkins/secrets/initialAdminPassword
+Jul 29 15:52:31 ip-172-31-20-67 jenkins[5288]: *************************************************************
+Jul 29 15:52:31 ip-172-31-20-67 jenkins[5288]: *************************************************************
+Jul 29 15:52:31 ip-172-31-20-67 jenkins[5288]: *************************************************************
+Jul 29 15:53:19 ip-172-31-20-67 jenkins[5288]: 2023-07-29 15:53:19.135+0000 [id=31]        INFO        jenkins.InitReactorRunner$1#onAttained: Completed initialization
+Jul 29 15:53:19 ip-172-31-20-67 jenkins[5288]: 2023-07-29 15:53:19.155+0000 [id=22]        INFO        hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and run>
+Jul 29 15:53:19 ip-172-31-20-67 systemd[1]: Started Jenkins Continuous Integration Server.
+Jul 29 15:53:19 ip-172-31-20-67 jenkins[5288]: 2023-07-29 15:53:19.311+0000 [id=46]        INFO        h.m.DownloadService$Downloadable#load: Obtained the updated dat>
+Jul 29 15:53:19 ip-172-31-20-67 jenkins[5288]: 2023-07-29 15:53:19.311+0000 [id=46]        INFO        hudson.util.Retrier#start: Performed the action check updates s>
+lines 1-19/19 (END)
+
